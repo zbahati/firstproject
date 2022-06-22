@@ -34,16 +34,13 @@ li{
     list-style-type: none;
 }
 
-
-
-
-
 main,
 aside,
 header{
     color:white;
-    background-color:#1992D2 ;
+    
     border: white 2px solid; 
+    background-color:#E2e8f0;
   
     
 
@@ -54,7 +51,7 @@ header{
     min-width: 1200px;
     height: 140px;
     
-    background-color: aliceblue;
+    background-color: white;
     grid-template-areas: 
     'nav-header'
     'sub-header';
@@ -62,16 +59,19 @@ header{
 }
 .nav-header{
     grid-area: nav-header;
-    display: flex;
+  display: grid;
     color:black;
-    padding:20px;
-    justify-content: space-between;
+    padding-bottom:30px ;
+   grid-template-columns: 2fr 1fr;
+   
+    
 }
 .sub-header{
     grid-area:sub-header;
-    display: flex;
+    display: grid;
     color:black;
-    padding: 20px;
+    padding-bottom: 30px;
+  grid-template-columns: 1fr 2fr;
 
 }
 main{
@@ -79,31 +79,168 @@ main{
     min-width: 80%;
     height: 100vh;
     background-color:#E2e8f0;
+    
+}
+.container{
+    width:90%;
+    height: 100vh;
+     padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1.3fr;
+    column-gap: 20px;
+    
+
+
+}
+h4,h5{
+    font-size: 17px;
+    font-weight: 500;
+    color:black;
+    padding: 12px;
+}
+.para-project
+{
+    color:gray;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.col-1,.col-2{
+ 
+    border:white 1px ;
+
+}
+.col-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 16px;
+   
+}
+.card{
+    background-color:#f0B429 ;
+    height: 200px;
+    border-radius: 14px;
+    
+   
+   
+}
+.col2-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+ gap:10px; 
+}
+hr{
+    font-weight: 200;
+    color:gray;
+    font-size: 10px;
+}
+.card2{
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 12px;
+
+}
+.nav-image{
+    background-color:rgb(11, 145, 96);
+    border-radius: 50px;
+    padding:30px;
+    width:50px
+
+}
+h2{
+    font-size: 17px;
+    font-weight: bold;
+    color:black
+
+}
+
+.tranding{
+    display:flex;
+}
+.image-brand{
+    background-color:skyblue;
+    border-radius: 50px;
+    padding:30px;
+    width:50px;
+}
+
+.tranding1{
+    display:flex;
+}
+.card-front-background{
+    background-color: #ffffff;
+    height:200px;
+    width:95%;    
+    margin-left: 5%;
+    border-radius: 14px;
+}
+.card2-front-background{
+    height: 300px;
 }
 aside{
     grid-area: side;
+    background-color:#1992D2 ;
+    min-width: 250px;
+  
 }
 
-.search_input{
+
+.search-input{
 margin-top:20px;
-width:50%;
-height: 17px;
-
+width:70%;
+height: 27px;
 border-radius: 50px; 
 }
 
-
-.image_search{
-   margin-top:20px;
-
-height: 17px;
-border-radius: 50px; 
+.image-search{
+  
+   height: 20px;
+   padding-left:10px;
+   padding-right:20px;
 }
-.sub_details{
+.image-notificatiion{
+    height:25px;
+    padding-left:90px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+.brand-logo{
+    padding-top:20px;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+.user-name{
+  
+   position: absolute;
+   margin-top: 35px;
+   font-weight: bold;
+}
+.sub-details{
     margin-top: -20px;
-    display:flex;
+    display:grid;
+   grid-template-areas: 
+   'icon description navigation';
 }
-.details{
-    display: block;
-    padding-left: 10px;
+
+
+ button{
+    width:100px;
+    height: 40px;
+  padding-left:30px;
+  background-color: #1992D2;
+  border-radius: 12px;
+  color:white;
+  font-weight: 800;
+
+ 
+} 
+.nav-div{
+    display: flex;
+    position: absolute;
+    margin-left: 600px;
+}
+
+i{
+    padding:10px;
 }
