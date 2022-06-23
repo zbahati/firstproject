@@ -3,7 +3,6 @@
     margin: 0;
     padding:0;
     overflow-x: none;
-    
 }
 
 body{
@@ -18,35 +17,57 @@ body{
     'side main';
 }
 
-.input-div{
-    display:grid;
-    grid-template-columns: 3fr 1fr;
-    gap:20px;
+.group-search i{
+    justify-content: center;
+
+
 
 }
-.group-brand{
-    padding-right:20px;
+.group{
+    display: flex;
 
+    padding-top:-10px;
+    
 }
+.user-nam{
+    font-weight: bold;
+}
+
+.group-search input{
+    justify-content: space-between;
+    position:absolute;
+}
+
 a{
     
-   color:white;
-   
-       text-decoration: none;
+color:white;
+
+    text-decoration: none;
 }
 
 ul{
-    margin-top:40px;
+    margin-top:30px;
     
 }
-.input_div{
-    display:flex;
+.input-div{
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+}
+.sub-div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.group-brand{
+    display: flex;  
+    justify-content: space-evenly;
+    justify-items: center;
+
 }
 
 ul li{
     padding-bottom:20px;
     padding-left: 10px;
-   
+
 }
 li{
     list-style-type: none;
@@ -64,29 +85,32 @@ header{
 header{
     grid-area: header;
     min-width: 1000px;
-    height: 140px;
+    height: 110px;
     
     background-color: white;
+    justify-content: center;
     grid-template-areas: 
+    
     'nav-header'
     'sub-header';
     
 }
 .nav-header{
     grid-area: nav-header;
-  display: grid;
+display: grid;
     color:black;
     padding-bottom:30px ;
-   grid-template-columns: 2fr 1fr;
-   
-    
+
 }
+
+
 .sub-header{
     grid-area:sub-header;
     display: grid;
     color:black;
     padding-bottom: 30px;
-  grid-template-columns: 1fr 2fr;
+
+
 
 }
 main{
@@ -97,74 +121,103 @@ main{
     
 }
 .container{
-    width:90%;
+    width:100%;
     height: 100vh;
-     padding: 20px;
+    justify-content: center;
     display: grid;
     grid-template-columns: 3fr 1.3fr;
-    column-gap: 20px;
+    column-gap: 10px;
+
     
-
-
 }
-h4,h5{
+
+h4{
     font-size: 17px;
     font-weight: 500;
     color:black;
-    padding: 12px;
+    font-weight: 500;
+    padding: 6px;
+}
+    h6{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size:10px;
+    color:black;
+    }
+    
+    .announcement-details{
+    font-size: 10px;
+    padding:10px;
+    color:gray;
+    }
+    .line{
+    border:rgb(135, 135, 135) 1px solid ;
+    width:220px;
+    margin-left: 10px;
+    position: absolute;
+    
+
+    }
+h5{
+    padding:7px;
+    font-size: 14px;
+    font-weight: 600;
+    color:black;
+
 }
 .para-project
 {
     color:gray;
     font-size: 12px;
     padding: 10px;
-}
+} 
 
 .col-1,.col-2{
- 
+
     border:white 1px ;
+    padding-left: 5%;
 
 }
+
 .col-grid{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 15px;
+    column-gap: 16px;
     row-gap: 16px;
-   
+
 }
 .card{
     background-color:#f0B429 ;
-    height: 200px;
+    height: 150px;
     border-radius: 14px;
     
-   
-   
+
+
 }
 .col2-grid{
     display: grid;
     grid-template-columns: 1fr;
- gap:10px; 
+    justify-content: center;
+
 }
-hr{
-    font-weight: 200;
-    color:gray;
-    font-size: 10px;
-    padding-left: 30px;
-   
-}
+
+
 .card2{
-    height: 300px;
+    height: 225px;
     background-color: #ffffff;
     border-radius: 12px;
+    margin-right: 20px;
+    width:250px;
 
 }
-.nav-image{
-    background-color:rgb(11, 145, 96);
-    border-radius: 50px;
-    padding:30px;
-    width:50px
-
+.announce-trending{
+    padding:10px 0px 5px 0px;
+    color:black;
 }
+    
+    
+
 h2{
     font-size: 17px;
     font-weight: bold;
@@ -172,14 +225,56 @@ h2{
 
 }
 
-.tranding{
-    display:flex;
+.trending{
+    display:grid;
+    height: 50px;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 20px;
+    
+}
+.trend-name{
+    font-size: 15px;
+    font-weight: 700;
+    color:black;
+    padding:10px 10px 0px 0px;
+    
+}
+.nav-image{
+    padding:5px 20px;
+}
+
+.trending img{
+    width:30px;
+    height: 40px;
+    border-radius: 50%;
+    
+    border:#1992D2 1px solid ;
+}
+
+.trend-card-desc{
+    display: grid;
+    height: 50px;
+    grid-template-areas: 
+    'myname'
+    'fullname';
 }
 .image-brand{
     background-color:skyblue;
     border-radius: 50px;
     padding:30px;
     width:50px;
+
+}
+.trend-name  {
+grid-area: myname;
+min-height:30px;
+}
+.trend-fullname{
+    grid-area: fullname;   
+    min-width: 100%;
+    color:gray;
+    font-size: 12px;
+    
 }
 
 .tranding1{
@@ -187,9 +282,9 @@ h2{
 }
 .card-front-background{
     background-color: #ffffff;
-    height:200px;
-    width:95%;    
-    margin-left: 5%;
+    height:150px;
+    width:98%;    
+    margin-left: 2%;
     border-radius: 14px;
 }
 .card2-front-background{
@@ -199,59 +294,77 @@ aside{
     grid-area: side;
     background-color:#1992D2 ;
     min-width: 250px;
-  
+
 }
 
 
 .search-input{
-margin-top:20px;
-width:70%;
-height: 27px;
-border-radius: 50px; 
+justify-content: center;
+position: absolute;
+top:10px;
+
+width:50%;
+height: 20px;
+border-radius: 50px;
+
+
+}
+.group-brand a{
+    color:white;    
+    background-color: #1992D2;
+    width:100px;
+    font-weight: bold;
+    /* height: 15px; */
+    font-size: 13px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius:  50px 50px 50px
+
 }
 
+.group i{
+    border-radius: 50%;
+    background-color: #f0B429;
+}
+
+
 .image-search{
-  
-   height: 20px;
-   padding-left:10px;
-   padding-right:20px;
-   justify-content: center;
+
+height: 20px;
+padding-left:10px;
+padding-right:20px;
+justify-content: center;
 }
-.image-notificatiion{
-    height:25px;
-    padding-left:90px;
-    padding-right: 20px;
-    margin-top: 20px;
-}
+
 .brand-logo{
     padding-top:20px;
     padding-left: 50px;
     padding-right: 20px;
 }
-.user-name{
-  
-   position: absolute;
-   margin-top: 35px;
-   font-weight: bold;
+.log-user{
+padding-left:10px;    
 }
+
 .sub-details{
-    margin-top: -20px;
     display:grid;
-   grid-template-areas: 
-   'icon description navigation';
+grid-template-areas: 
+'icon description navigation';
 }
 
-
- button{
+.sub-detail{
+    display: inline;
+    padding-bottom: 20px;
+}
+button{
     width:100px;
     height: 40px;
-  padding-left:30px;
-  background-color: #1992D2;
-  border-radius: 12px;
-  color:white;
-  font-weight: 800;
+padding-left:30px;
+background-color: #1992D2;
+border-radius: 12px;
+color:white;
+font-weight: 800;
 
- 
+
 } 
 .nav-div{
     display: flex;
@@ -260,7 +373,21 @@ border-radius: 50px;
 }
 
 i{
-    padding:20px;
+    padding:10px;
     text-align: center;
 }
+.card-footer{
+    float: right;
+}
 
+.card-footer i{
+    color:gray;
+    padding: 10px;
+    
+
+}
+#logo-icon{
+    background-color: #f0B429;
+    border-radius: 50%;
+    
+}
