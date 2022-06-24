@@ -7,7 +7,7 @@
 
 body{
     
-    font-family: combria, serif;
+    font-family: sans-serif;
     display: grid;
     height:100vh;
     width:100%;
@@ -19,23 +19,60 @@ body{
 
 .group-search i{
     justify-content: center;
+    padding-left: 20px;
 
 
 
 }
 .group{
-    display: flex;
+    display: grid;
+    width:60%;
+   margin-top: -15px;
+   justify-content: start;
+   padding-left: -20px;
+  
+    grid-template-areas: 
+    'sub-icon para'
+    'sub-icon user-name';  
+}
 
-    padding-top:-10px;
+
+.icon-logo{
+    grid-area: sub-icon;
+    width:80px;
+    /* width:50px;
+    height: 50px;
+    */
     
 }
-.user-nam{
+.icon-logo i{
+    width:40px;
+    height:40px;
+    margin-left: 31px;
+
+    position: absolute;
+}
+
+p{
+    grid-area: para;   
+    font-size: 12px; 
+    
+}
+h1{
+    grid-area: user-name;
+    font-size: 14px;
     font-weight: bold;
+    color:white;
+    
+    
 }
 
 .group-search input{
     justify-content: space-between;
     position:absolute;
+    width:33%;
+    border:none;
+    background-color: #E2E8f0;
 }
 
 a{
@@ -55,20 +92,45 @@ ul{
 }
 .sub-div{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
 }
 .group-brand{
-    display: flex;  
-    justify-content: space-evenly;
-    justify-items: center;
+    /* display: flex;  
+    
+    justify-items: center; */
+    display: grid;
+    grid-template-areas: 
+    ' nav nav2 nav3';
+
 
 }
+
+
+
 
 ul li{
-    padding-bottom:20px;
-    padding-left: 10px;
+    padding-bottom:5px;
+    padding-left: 15px;
+    font-weight: bold;
+    font-size: 14px;
 
 }
+.dash li h1{
+    padding-top: 10px;
+    padding-bottom:24px ;
+    font-size: 20px;
+   padding-left: 50px;
+    color:white;
+
+}
+.dash li h1 i{
+    
+    position: absolute;
+   left:17px;
+   top:27px;
+    font-size: 30px;
+}
+
 li{
     list-style-type: none;
 }
@@ -86,7 +148,6 @@ header{
     grid-area: header;
     min-width: 1000px;
     height: 110px;
-    
     background-color: white;
     justify-content: center;
     grid-template-areas: 
@@ -102,6 +163,7 @@ display: grid;
     padding-bottom:30px ;
 
 }
+
 
 
 .sub-header{
@@ -130,18 +192,32 @@ main{
 
     
 }
+.site-announce{
+    color:black;
+    font-weight: bold;
+}
+h6{
+    color:gray;
+}
+.card-details h6{
+    color:black;
+    font-size: 12px;
+    padding-left: 12px;
+    padding-bottom: 10px;
+    
+}
 
 h4{
     font-size: 17px;
     font-weight: 500;
     color:black;
-    font-weight: 500;
+    font-weight: bold;
     padding: 6px;
 }
-    h6{
+    h1{
     padding-top: 10px;
     padding-left: 10px;
-    font-weight: 600;
+    
     font-size:10px;
     color:black;
     }
@@ -153,7 +229,7 @@ h4{
     }
     .line{
     border:rgb(135, 135, 135) 1px solid ;
-    width:220px;
+    width:230px;
     margin-left: 10px;
     position: absolute;
     
@@ -191,8 +267,6 @@ h5{
     background-color:#f0B429 ;
     height: 150px;
     border-radius: 14px;
-    
-
 
 }
 .col2-grid{
@@ -208,12 +282,14 @@ h5{
     background-color: #ffffff;
     border-radius: 12px;
     margin-right: 20px;
-    width:250px;
+    width:270px;
 
 }
 .announce-trending{
     padding:10px 0px 5px 0px;
     color:black;
+    font-weight: bold;
+    
 }
     
     
@@ -227,59 +303,46 @@ h2{
 
 .trending{
     display:grid;
-    height: 50px;
-    grid-template-columns: 1fr 2fr;
-    row-gap: 20px;
-    
-}
-.trend-name{
-    font-size: 15px;
-    font-weight: 700;
-    color:black;
-    padding:10px 10px 0px 0px;
-    
-}
-.nav-image{
-    padding:5px 20px;
+    justify-content: start;
+    grid-template-areas: 
+    'image name'
+    'image name';
+   
 }
 
-.trending img{
-    width:30px;
-    height: 40px;
-    border-radius: 50%;
+.nav-image{
+    grid-area: image;
+    padding-top: 10px;
+    padding-left: 17px;
     
-    border:#1992D2 1px solid ;
+    /* padding:5px 20px; */
 }
+
 
 .trend-card-desc{
-    display: grid;
-    height: 50px;
-    grid-template-areas: 
-    'myname'
-    'fullname';
+padding-left: 16px; 
+padding-top:15px ; 
+justify-items: center;
+    grid-area: name; 
+    color:black;
 }
-.image-brand{
-    background-color:skyblue;
-    border-radius: 50px;
-    padding:30px;
-    width:50px;
 
-}
-.trend-name  {
-grid-area: myname;
-min-height:30px;
-}
-.trend-fullname{
-    grid-area: fullname;   
-    min-width: 100%;
-    color:gray;
-    font-size: 12px;
+.nav-image img{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+  
     
 }
 
-.tranding1{
-    display:flex;
-}
+.trend-fullname{
+    padding-top: -30px;
+    color:gray;
+   
+    
+} 
+
+
 .card-front-background{
     background-color: #ffffff;
     height:150px;
@@ -302,7 +365,7 @@ aside{
 justify-content: center;
 position: absolute;
 top:10px;
-
+padding: 10px;
 width:50%;
 height: 20px;
 border-radius: 50px;
@@ -312,18 +375,21 @@ border-radius: 50px;
 .group-brand a{
     color:white;    
     background-color: #1992D2;
-    width:100px;
+    width:70px;
+    margin-left: -10px;
     font-weight: bold;
-    /* height: 15px; */
+     height: 30px; 
+     padding: 5px;
     font-size: 13px;
     text-align: center;
-    padding-top: 10px;
-    border-radius:  50px 50px 50px
+    
 
+    border-radius:  50px 50px 50px
 }
 
 .group i{
     border-radius: 50%;
+    padding-left:10px;
     background-color: #f0B429;
 }
 
@@ -342,7 +408,7 @@ justify-content: center;
     padding-right: 20px;
 }
 .log-user{
-padding-left:10px;    
+padding-left:20px;    
 }
 
 .sub-details{
@@ -371,23 +437,30 @@ font-weight: 800;
     position: absolute;
     margin-left: 600px;
 }
-
-i{
-    padding:10px;
-    text-align: center;
+.dash li i{
+    padding-top:10px;
+    padding-left:10px;
+    padding-right: 20px;
 }
-.card-footer{
-    float: right;
+ i{
+    padding-top:10px;
+    padding-left: 10px;
+    text-align: center;
+    padding-right:20px ;
+    
+} 
+.card-footer i{
+    padding-top: 40px;
+    display: flex;
+    float:right;
+    padding-bottom: 10px; 
 }
 
 .card-footer i{
     color:gray;
-    padding: 10px;
-    
+}
 
-}
-#logo-icon{
-    background-color: #f0B429;
-    border-radius: 50%;
-    
-}
+
+
+
+
