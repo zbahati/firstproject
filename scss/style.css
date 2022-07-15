@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  width: 50px;
+}
+
+h5 {
+  font-size: 20px;
+  padding-top: 5px;
+}
+
+body {
+  font-family: sans-serif;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas: "nav header" "nav main";
+}
+
+nav {
+  grid-area: nav;
+  background-color: #1992d2;
+  min-width: 200px;
+}
+nav ul {
+  display: block;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+nav ul li {
+  list-style-type: none;
+  padding: 10px 13px;
+}
+nav ul li h1 {
+  color: white;
+  padding-top: 20px;
+}
+nav ul li a {
+  color: white;
+}
+nav ul a:hover {
+  color: white;
+  font-weight: 700;
+}
+nav ul i {
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+}
+
+header {
+  background-color: #fff;
+  min-width: 1000px;
+  height: 120px;
+  display: grid;
+  grid-template-areas: "nav-header" "sub-nav-header";
+}
+header .nav-header {
+  grid-area: nav-header;
+  display: grid;
+  grid-template-areas: "input-div";
+}
+header .nav-header .input-div {
+  grid-area: input-div;
+  display: grid;
+  grid-template-areas: "form-group group-brand";
+}
+header .nav-header .input-div .form-group {
+  grid-area: form-group;
+  justify-content: space-between;
+}
+header .nav-header .input-div .form-group i {
+  font-size: small;
+  margin: 10px;
+  width: 30px;
+  padding: 8px 10px;
+  color: gray;
+}
+header .nav-header .input-div .form-group input {
+  min-width: 350px;
+  height: 25px;
+  border-radius: 50px 50px 50px;
+  border: none;
+  background-color: #e2e8f0;
+}
+header .nav-header .input-div .group-brand {
+  grid-area: group-brand;
+  justify-content: space-between;
+}
+header .nav-header .input-div .group-brand i {
+  font-size: larger;
+  margin-left: 120px;
+  width: 30px;
+  padding: 8px 10px;
+  color: gray;
+}
+header .nav-header .input-div .group-brand .log-user {
+  padding-left: 30px;
+}
+header .sub-nav-header {
+  grid-area: sub-nav-header;
+  display: grid;
+  grid-template-areas: "sub-input-div";
+}
+header .sub-nav-header .sub-input-div {
+  grid-area: sub-input-div;
+  display: grid;
+  grid-template-areas: "sub-form-group  sub-group-brand";
+}
+header .sub-nav-header .sub-input-div .sub-form-group {
+  grid-area: sub-form-group;
+  display: flex;
+  justify-content: start;
+}
+header .sub-nav-header .sub-input-div .sub-form-group i {
+  font-size: 50px;
+  padding-left: 25px;
+  padding-right: 10px;
+}
+header .sub-nav-header .sub-input-div .sub-form-group p {
+  display: grid;
+  font-size: 10px;
+  grid-template-areas: "header-p" "sub-header-p";
+}
+header .sub-nav-header .sub-input-div .sub-form-group p .header-hi {
+  grid-area: header-p;
+}
+header .sub-nav-header .sub-input-div .sub-form-group p .p-name {
+  grid-area: sub-header-p;
+  padding: 5px;
+}
+header .sub-nav-header .sub-input-div .sub-group-brand ul {
+  padding-left: 300px;
+}
+header .sub-nav-header .sub-input-div .sub-group-brand ul li {
+  padding: 20px;
+  display: inline;
+  width: 40px;
+  color: #1992d2;
+}
+header .sub-nav-header .sub-input-div .sub-group-brand ul li a {
+  width: 90px;
+  display: inline-block;
+  text-align: center;
+  padding: 8px;
+  border-radius: 100px;
+  color: white;
+  background-color: #1992d2;
+  font-size: 13px;
+}
+header .sub-nav-header .sub-input-div .sub-group-brand ul li a:hover {
+  background-color: brown;
+  transform: scale(0.9);
+}
+
+main {
+  background-color: #e2e8f0;
+  min-width: 1000px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+main .container {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+}
+main .container .col-1 h4 {
+  font-size: 15px;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+main .container .col-1 .col-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+}
+main .container .col-1 .col-grid .card {
+  background-color: #f0b429;
+  justify-content: center;
+  margin: 13px;
+  width: 90%;
+  border-radius: 13px;
+  height: 160px;
+}
+main .container .col-1 .col-grid .card .card-front-background {
+  background-color: #fff;
+  width: 98%;
+  height: 160px;
+  margin-left: 3%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  justify-items: center;
+}
+main .container .col-1 .col-grid .card .card-front-background .card-details {
+  margin-left: 15px;
+  margin-right: 12px;
+}
+main .container .col-1 .col-grid .card .card-front-background .card-details .para-project {
+  font-size: 12px;
+  color: gray;
+  padding-top: 13px;
+}
+main .container .col-1 .col-grid .card .card-front-background .card-details .para-project .p-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+main .container .col-1 .col-grid .card .card-front-background .card-footer {
+  display: flex;
+  float: right;
+  padding: 10px;
+  margin-top: 30px;
+}
+main .container .col-1 .col-grid .card .card-front-background .card-footer i {
+  margin-right: 30px;
+  color: rgb(108, 98, 98);
+  font-size: large;
+}
+main .container .col-2 h4 {
+  font-size: 15px;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+main .container .col-2 .col2-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+}
+main .container .col-2 .col2-grid .card2 {
+  background-color: #fff;
+  justify-content: center;
+  margin: 13px;
+  width: 98%;
+  border-radius: 13px;
+  height: 240px;
+}
+main .container .col-2 .col2-grid .card2 .card2-front-background {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  justify-items: center;
+}
+main .container .col-2 .col2-grid .card2 .card2-front-background .card-details {
+  margin-left: 15px;
+  margin-right: 12px;
+}
+main .container .col-2 .col2-grid .card2 .card2-front-background .card-details .para-project {
+  font-size: 9px;
+  color: gray;
+  padding-top: 13px;
+  padding-bottom: 10px;
+}
+main .container .col-2 .col2-grid .card2 .card2-front-background .card-details .para-project .p-title {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+}
+main .container .col-2 .col2-grid .card2 .card2-front-background .card-details .para-project .line {
+  border: rgb(135, 135, 135) 1px solid;
+  margin: 20px;
+  position: absolute;
+}
+main .container .col-2 .col2-grid .card2 .card2-front-background .card-details .trending {
+  display: grid;
+  grid-template-areas: "image desc";
+}
+main .container .col-2 .col2-grid .card2 .card2-front-background .card-details .trending .nav-image {
+  grid-area: image;
+}
+main .container .col-2 .col2-grid .card2 .card2-front-background .card-details .trending .nav-image img {
+  width: 30px;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+main .container .col-2 .col2-grid .card2 .card2-front-background .card-details .trending .trend-card-desc {
+  grid-area: desc;
+  margin-top: 20px;
+}
+main .container .col-2 .col2-grid .card2 .card2-front-background .card-details .trending .trend-card-desc .trend-name {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 4px;
+}
+main .container .col-2 .col2-grid .card2 .card2-front-background .card-details .trending .trend-card-desc .trend-fullname {
+  color: gray;
+  font-size: 11px;
+  padding: 0 4px;
+}
+main .container .col-2 .col2-grid .announce-trending {
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
